@@ -1,12 +1,14 @@
-uuid: dcb38842-75a1-4709-a4d0-28ae8e8ca4cb
+uuid: a403ed8c-4635-4844-b088-9f51e2dbd69b
 langcode: en
 status: true
 dependencies:
   module:
-    - node
-id: node.field_dimensions
-field_name: field_dimensions
-entity_type: node
+    - media
+_core:
+  default_config_hash: SJgxR5XWOesQbEKqp8VgInPyJjCFU_t2pi7UzYB78xg
+id: media.field_media_oembed_video
+field_name: field_media_oembed_video
+entity_type: media
 type: string
 settings:
   max_length: 255

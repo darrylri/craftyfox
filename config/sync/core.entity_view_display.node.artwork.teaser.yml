@@ -5,7 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.artwork.body
+    - field.field.node.artwork.field_additional_images
     - field.field.node.artwork.field_dimensions
+    - field.field.node.artwork.field_main_image
     - field.field.node.artwork.field_sold
     - node.type.artwork
   module:
@@ -30,5 +32,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_additional_images: true
   field_dimensions: true
+  field_main_image: true
   field_sold: true

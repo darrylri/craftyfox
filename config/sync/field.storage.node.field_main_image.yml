@@ -1,17 +1,16 @@
-uuid: dcb38842-75a1-4709-a4d0-28ae8e8ca4cb
+uuid: a1dbc5a0-4279-4562-b6fb-afdc39fd9245
 langcode: en
 status: true
 dependencies:
   module:
+    - media
     - node
-id: node.field_dimensions
-field_name: field_dimensions
+id: node.field_main_image
+field_name: field_main_image
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  target_type: media
 module: core
 locked: false
 cardinality: 1

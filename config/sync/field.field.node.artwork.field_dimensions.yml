@@ -1,12 +1,10 @@
-uuid: 78ce261c-5340-447c-abdd-71a9444d4cc0
+uuid: 1f2fe045-f7d3-412a-bd9a-794cfe2ca812
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_dimensions
     - node.type.artwork
-  module:
-    - options
 id: node.artwork.field_dimensions
 field_name: field_dimensions
 entity_type: node
@@ -18,4 +16,4 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: list_string
+field_type: string

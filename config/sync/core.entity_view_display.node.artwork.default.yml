@@ -4,11 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.artwork.body
+    - field.field.node.artwork.field_additional_images
     - field.field.node.artwork.field_dimensions
+    - field.field.node.artwork.field_main_image
     - field.field.node.artwork.field_sold
     - node.type.artwork
   module:
-    - options
     - text
     - user
 id: node.artwork.default
@@ -19,20 +20,39 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 4
     settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_additional_images:
+    type: entity_reference_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
     third_party_settings: {  }
     region: content
   field_dimensions:
-    weight: 102
-    label: above
-    settings: {  }
+    weight: 2
+    label: inline
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: list_default
+    type: string
+    region: content
+  field_main_image:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
     region: content
   field_sold:
-    weight: 103
-    label: above
+    weight: 3
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
@@ -41,8 +61,8 @@ content:
     type: boolean
     region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

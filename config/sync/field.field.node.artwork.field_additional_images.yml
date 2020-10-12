@@ -1,0 +1,28 @@
+uuid: 6f5db9bf-ff90-45cb-afe9-ce1e668eacd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_images
+    - media.type.image
+    - node.type.artwork
+id: node.artwork.field_additional_images
+field_name: field_additional_images
+entity_type: node
+bundle: artwork
+label: 'Additional images'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
