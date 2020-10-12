@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.artwork.body
     - field.field.node.artwork.field_additional_images
+    - field.field.node.artwork.field_artwork_type
     - field.field.node.artwork.field_dimensions
     - field.field.node.artwork.field_main_image
     - field.field.node.artwork.field_sold
@@ -40,6 +41,16 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+    region: content
+  field_artwork_type:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_dimensions:
     weight: 9

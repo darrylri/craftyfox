@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.artwork.body
     - field.field.node.artwork.field_additional_images
+    - field.field.node.artwork.field_artwork_type
     - field.field.node.artwork.field_dimensions
     - field.field.node.artwork.field_main_image
     - field.field.node.artwork.field_sold
@@ -21,18 +22,43 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 4
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  field_dimensions:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_main_image:
+    type: entity_reference_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      view_mode: media_library
+      link: false
+    third_party_settings: {  }
+  field_sold:
+    type: boolean
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   field_additional_images: true
-  field_dimensions: true
-  field_main_image: true
-  field_sold: true
+  field_artwork_type: true

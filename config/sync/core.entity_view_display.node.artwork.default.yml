@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.artwork.body
     - field.field.node.artwork.field_additional_images
+    - field.field.node.artwork.field_artwork_type
     - field.field.node.artwork.field_dimensions
     - field.field.node.artwork.field_main_image
     - field.field.node.artwork.field_sold
@@ -20,18 +21,26 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     region: content
   field_additional_images:
     type: entity_reference_entity_view
-    weight: 5
+    weight: 6
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
+  field_artwork_type:
+    weight: 3
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_dimensions:
     weight: 2
@@ -51,7 +60,7 @@ content:
     third_party_settings: {  }
     region: content
   field_sold:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       format: default

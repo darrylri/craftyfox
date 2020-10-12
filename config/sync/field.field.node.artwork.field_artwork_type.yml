@@ -1,0 +1,29 @@
+uuid: 036c5335-7089-4d85-8291-564d309bce08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artwork_type
+    - node.type.artwork
+    - taxonomy.vocabulary.art_medium
+id: node.artwork.field_artwork_type
+field_name: field_artwork_type
+entity_type: node
+bundle: artwork
+label: 'Artwork type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      art_medium: art_medium
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

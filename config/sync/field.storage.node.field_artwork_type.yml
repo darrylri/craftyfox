@@ -1,0 +1,20 @@
+uuid: 2d2ce65f-3f57-4f91-a5a6-144d7abd819b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_artwork_type
+field_name: field_artwork_type
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
