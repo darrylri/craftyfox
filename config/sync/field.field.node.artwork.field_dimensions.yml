@@ -1,0 +1,21 @@
+uuid: 78ce261c-5340-447c-abdd-71a9444d4cc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dimensions
+    - node.type.artwork
+  module:
+    - options
+id: node.artwork.field_dimensions
+field_name: field_dimensions
+entity_type: node
+bundle: artwork
+label: Dimensions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

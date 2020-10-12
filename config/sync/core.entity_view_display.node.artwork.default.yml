@@ -1,0 +1,48 @@
+uuid: b7bb66e0-7326-4d05-a3d6-bdfdb1de502e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.artwork.body
+    - field.field.node.artwork.field_dimensions
+    - field.field.node.artwork.field_sold
+    - node.type.artwork
+  module:
+    - options
+    - text
+    - user
+id: node.artwork.default
+targetEntityType: node
+bundle: artwork
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_dimensions:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_sold:
+    weight: 103
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,8 @@
+uuid: b39f2e8d-7c84-4f0a-9179-e72bd221226e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Art Medium'
+vid: art_medium
+description: 'Artwork medium type'
+weight: 0

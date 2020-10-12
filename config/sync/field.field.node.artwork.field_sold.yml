@@ -1,0 +1,23 @@
+uuid: 3d4b3800-fbfb-4e67-8484-2dd24a480ae7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sold
+    - node.type.artwork
+id: node.artwork.field_sold
+field_name: field_sold
+entity_type: node
+bundle: artwork
+label: Sold
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Sold
+  off_label: Available
+field_type: boolean

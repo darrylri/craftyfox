@@ -1,0 +1,34 @@
+uuid: d820b3de-0578-4a4e-8c55-c9cf58fd51d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.artwork.body
+    - field.field.node.artwork.field_dimensions
+    - field.field.node.artwork.field_sold
+    - node.type.artwork
+  module:
+    - text
+    - user
+id: node.artwork.teaser
+targetEntityType: node
+bundle: artwork
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_dimensions: true
+  field_sold: true
